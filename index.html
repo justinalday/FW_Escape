@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/freewheel.png">
+    <script src="script.js"></script>
+    <title>Escape</title>
+</head>
+<body>
+    
+    <div id="timer" style="text-align: center; font-size: 500px; padding: 24px 0; margin: 0 auto;"></div>
+    <br>
+    
+    <form style="align-items: center;margin: 0 auto; width: 1000px; text-align: center;">
+    
+        <input type="password" style=" font-size: 80px; margin: 0 auto; background-color: black;  color: green; border: 0;width: 600px;" placeholder="Enter password">
+    
+    </form>
+
+<script>
+
+    var time_limit = prompt("Please set the time limit in minutes");
+        var password = prompt("Please set password");
+        var buttonStop = document.getElementById("btn-stop");
+        var Interval
+        
+    
+
+    console.log(password);  
+    
+    var timer = time_limit * 60;
+
+    var interval = setInterval(function() {
+      timer--;
+      
+      //format the timer    
+      var minutes = Math.floor(timer / 60);
+      var seconds = timer % 60;
+      document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+   
+      if (timer/60 == 0 && timer<60) {
+        alert("Time is up!");
+        clearInterval(interval);
+      }
+    }, 1000);
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+@font-face {
+    font-family: digital;
+    src: url(digital-7.ttf);
+  }
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    color: #40FC36;
+    font-size: 72px;
+    font-family: digital;
+}
